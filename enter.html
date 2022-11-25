@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Вход</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <!-- <meta name="keywords">
+    <meta name="description"> -->
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com"> -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">  -->
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <!-- <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet"> -->
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid border-bottom">
+      <div class="row"></div>
+      <div class="row align-items-center py-3 px-xl-5">
+          <div class="col d-lg-block">
+          <h3>Вход</h3>    
+            
+          </div> 
+          <i class="fa fa-user-circle fa-3x " href="#navbar-vertical"  data-toggle="collapse" ></i>
+              <nav class="collapse" data-toggle="collapse" id="navbar-vertical">
+                  <div class="navbar-nav">
+                      <h6>
+                          <div class="navbar-nav" >                            
+                               <a href="index.html" class="nav-item nav-link">Главная</a>                                
+                          </div>
+                          <div class="nav-item ">
+                              <a href="index.html" class="nav-link">Личный кабинет</a>
+                          </div>
+                          <div class="nav-item ">
+                              <a href="index.html" class="nav-link">Уведомления</a>
+                          </div>
+                          <div class="nav-item ">
+                              <a href="search.html" class="nav-link">Настройки</a>
+                          </div>
+                          <div class="nav-item ">
+                              <a href="reg.html" class="nav-link">Регистрация</a>
+                          </div>
+                          <div class="nav-item ">
+                              <a href="enter.html" class="nav-link">Вход</a>
+                          </div>
+                      </h6>
+                  </div>  
+              </nav>
+      </div>
+
+     </div>
+  <!-- Topbar End -->
+    <form method="post" id="form">
+      <div class="ent col-9">
+      <div class="pl-5 pb-4">
+      </div>
+      
+      <div class="container ml-5 col-11" style="padding-bottom: 30px;">
+                <select style="border-radius: 10px; height: 30px; width: 72%;" id="role" name="role">
+                <option value="0">Простой пользователь</option>
+                <option value="1">Автошкола</option>
+                <option value="2">Автодром</option>
+                </select>
+      </div>
+      <div class="container ml-5 col-11" style="padding-bottom: 50px;">
+         <input type="text" placeholder="Логин" name="login" id="login" >
+      </div>
+        <div class="container ml-5 col-11" style="padding-bottom: 50px;">
+           <input type="password" placeholder="Пароль" name="password" id="password">
+        </div>
+          
+        <div class="container" style="padding-bottom: 50px;" >
+          <!-- <input type="button" onclick="myFunction()" placeholder="ENTER" name="ENTER" >  -->
+          <!-- <button window.location.assign('index.html') ></button> -->
+          <a onclick="alertfunction()" class="button"><h4 style="text-align: center;">  <b> Войти </b>  </h4></a>
+       
+        </div>
+
+
+        
+        <div class="container" style="padding-bottom: 10px; margin-left: 20%;">
+            Нет аккаунта? <a href="reg.html">Зарегистрироваться</a>
+        </div>
+        <div class="container" style="padding-bottom: 50px; margin-left: 20%;">
+            Забыли пароль? <a href="restore-password.html">Востановить
+            </a>
+        </div>
+      </div>
+    </form>
+
+    
+    <script >
+        var link;
+function alertfunction(){ 
+    // debugger
+let form = document.getElementById('form');
+let role = document.getElementById('role').value;
+let login = document.getElementById('login').value;
+let password = document.getElementById('password').value;
+    
+    if(role == 0 && login=='1' && password=='1'){
+         window.open("index.html");
+    } else if(role == 1 && login == '2' && password == '2'){
+        window.open("autoschools.html");
+    }
+    else if(role = 3 && login == '3' && password == '3'){
+        window.location.assign() = 'index3.html';
+    }
+}
+      </script>
+  
+
+
+<style>
+          
+input{
+position: absolute;
+width: 70%;
+height: 30px;
+
+background: #FFFFFF;
+box-shadow: 0px 4px 11px 3px rgba(72, 66, 66, 0.07);
+border-radius: 8px;
+}
+.button {
+  padding-bottom: 35px;
+  box-sizing: border-box;
+
+position: absolute;
+width: 40%;
+height: 20px;
+left: 20%;
+right: 20%;
+
+background:linear-gradient(5deg, #8afbee, #dddcf2);
+box-shadow: 0px 4px 7px 3px rgba(72, 66, 66, 0.25);
+border-radius: 15px;
+}
+}
+.ent{
+    
+    padding-top: 10%;
+    padding-bottom: 50%;
+    left: 15%;
+    right: 15%;
+}
+
+</style>
+       
+
+
+
+<!-- Back to Top -->
+<a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+<!-- JavaScript Libraries -->
+<!-- <script>
+    document.user_form.action
+    var value = e.value;
+    function myFunction() {
+    if(value){}
+    }
+</script> -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+<!-- <script src="lib/easing/easing.min.js"></script> -->
+<!-- <script src="lib/owlcarousel/owl.carousel.min.js"></script> -->
+
+<!-- Contact Javascript File -->
+<script src="mail/jqBootstrapValidation.min.js"></script>
+<!-- <script src="mail/contact.js"></script>    -->
+
+<!-- Template Javascript -->
+
+
+</body>
+
+</html>
